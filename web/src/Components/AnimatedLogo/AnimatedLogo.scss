@@ -1,0 +1,44 @@
+@import '../../Scss/Variables';
+
+#Logo-secid-title {
+  #Logo {
+    @keyframes logo-animation {
+      from { transform: translateY(0px) }
+      to { transform: translateY(-2px) }
+    }
+  
+    #S-1 { animation: logo-animation 3s ease-in-out 0.0s infinite alternate-reverse; }
+    #S-2 { animation: logo-animation 3s ease-in-out 0.3s infinite alternate;  }
+    #S-3 { animation: logo-animation 3s ease-in-out 0.3s infinite alternate-reverse; }
+  }
+
+  #Title {
+    @for $i from 1 through 6 {
+      g:nth-child(#{$i}) {
+        @keyframes title-animation {
+          0% { fill: $color-black; }
+          85% { fill: $color-black; }
+          90% { fill: $color-white; }
+          100% { fill: $color-black; }
+        }
+
+        path {
+          animation: title-animation 10s #{$i*100}ms ease-in-out infinite; 
+        }
+      }
+    }
+  }
+}
+
+#Logo-secid-clean {
+  #Logo {
+    @keyframes logo-animation {
+      from { transform: translateY(0px) }
+      to { transform: translateY(-2px) }
+    }
+  
+    #S-1 { animation: logo-animation 3s ease-in-out 0.0s infinite alternate-reverse; }
+    #S-2 { animation: logo-animation 3s ease-in-out 0.3s infinite alternate;  }
+    #S-3 { animation: logo-animation 3s ease-in-out 0.3s infinite alternate-reverse; }
+  }
+}

@@ -1,0 +1,113 @@
+/* Colors */
+$background: #FFFFFF;
+$background-secondary: #F8F8F8;
+$special-primary: #5E12FF;
+$special-secondary: #AA82FF;
+$special-extra: #3800AF;
+$text-primary: #000000;
+$text-secondary: #545454;
+$text-light: #AAAAAA;
+$text-hover: #303030;
+$color-black: #000000;
+$color-white: #FFFFFF;
+
+$font--primary: 'Roboto';
+
+// DESKTOP: Font sizes (in pixels) / line-heights
+$font-size--h1: 55;
+$line-height--h1: 60;
+
+$font-size--h2: 40;
+$line-height--h2: 44;
+
+$font-size--h3: 26;
+$line-height--h3: 28;
+
+$font-size--h4: 12;
+$line-height--h4: 28;
+
+$font-size--paragraph: 18;
+$line-height--paragraph: 28;
+
+$font-size--button: 16;
+$line-height--button: 2rem;
+
+
+// MOBILE: Font sizes (in pixels) / line-heights
+$s-font-size--h1: 30;
+$s-line-height--h1: 33;
+
+$s-font-size--h2:24;
+$s-line-height--h2: 28;
+
+$s-font-size--h3: 20;
+$s-line-height--h3: 28;
+
+$s-font-size--h4: 12;
+$s-line-height--h4: 28;
+
+$s-font-size--paragraph: 14;
+$s-line-height--paragraph: 18;
+
+$s-font-size--button: 14;
+$s-line-height--button: 1.8rem;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1240px,
+);
+
+$screen-sm: #{map-get($grid-breakpoints, sm)};
+$screen-md: #{map-get($grid-breakpoints, md)};
+$screen-lg: #{map-get($grid-breakpoints, lg)};
+$screen-xl: #{map-get($grid-breakpoints, xl)};
+
+$screen-phone: $screen-sm;
+$screen-tablet: $screen-md;
+$screen-desktop: $screen-lg;
+$screen-lg-desktop: $screen-xl;
+
+$screen-xs-max: #{map-get($grid-breakpoints, sm) - 1};
+$screen-sm-max: #{map-get($grid-breakpoints, md) - 1};
+$screen-md-max: #{map-get($grid-breakpoints, lg) - 1};
+$screen-lg-max: #{map-get($grid-breakpoints, xl) - 1};
+
+// Lazy media query variables.
+$mobile: 'screen and (min-width: #{$screen-sm})';
+$tablet: 'screen and (min-width: #{$screen-md})';
+$normal: 'screen and (min-width: #{$screen-lg})';
+$wide: 'screen and (min-width: #{$screen-xl})';
+$mobile-only: 'screen and (max-width: #{$screen-sm-max})';
+$tablet-only: 'screen and (min-width: #{$screen-md}) and (max-width: #{$screen-md-max})';
+$normal-only: 'screen and (min-width: #{$screen-lg}) and (max-width: #{$screen-lg-max})';
+$mobile-down: 'screen and (max-width: #{$screen-sm-max})';
+$tablet-down: 'screen and (max-width: #{$screen-md-max})';
+$normal-down: 'screen and (max-width: #{$screen-lg-max})';
+
+/* Margins / Paddings */
+$base-margin: 25px;
+$base-container-padding: 20px;
+
+/* Transitions */
+$transition-fast: 0.35s;
+$transition-normal: 0.55s;
+$transition-slow: 0.75s;
+
+/* Border Radius */
+$border-radius--primary: 10px;
+$border-radius--secondary: 20px;
+
+/* Shadows */
+
+$box-shadow--primary: 0px 2px 4px rgba(0, 0, 0, 0.25);
+$box-shadow--secondary: 0px 6px 12px 0px rgba(0, 0, 0, 0.15);
+
+/* Z-Index */
+$index-low: -5;
+$index-1: 1;
+$index-2: 10;
+$index-3: 50;
+$index-4: 100;

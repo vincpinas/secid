@@ -1,0 +1,82 @@
+@import '../../Scss/Mixins';
+@import '../../Scss/Variables';
+
+.homeContainer {
+  .homeHero {
+    .heroWrapper {
+      background: $background-secondary;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 150px 0px 100px 0px;
+      z-index: $index-low;
+  
+      h3 { color: $text-secondary; }
+  
+      .heroImages {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        img { position: absolute; }
+  
+        #heroTopImg {
+          animation: hover-cardspec 2s infinite ease-in-out alternate;
+        }
+  
+        @media #{$tablet-down} { display: none; }
+      }
+  
+      @media #{$normal} {
+        @for $i from 1 through 15 {
+          div:nth-child(#{$i}) { @include drop-in-animation($i * 0.2s); }
+        }
+      }
+    }
+
+    #mixedWaveSeperator {
+      width: 100%;
+    }
+  }
+
+  .homeAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      li {
+        max-width: 20%;
+        margin: 1rem;
+      }
+
+      @media #{$tablet-down} { 
+        flex-direction: column;
+
+        li {
+          max-width: 80%;
+          margin: 1rem;
+        }
+      }
+    }
+
+    a {
+      @include button;
+      @include paragraph;
+      margin-top: 20px;
+      font-weight: 700;
+      padding: 10px 100px;
+    }
+  }
+
+  #bottomWave {
+    width: 100%;
+  }
+}

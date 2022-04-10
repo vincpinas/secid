@@ -1,0 +1,89 @@
+@import './Variables';
+@import './Animations';
+
+@mixin font--primary($weight: 300, $style: normal) {
+  font-family: $font--primary;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin font-size($size) {
+  font-size: #{$size}px;
+}
+
+@mixin button {
+  @include font--primary(800);
+  outline: 0;
+  border: 2px solid $color-black;
+  color: $color-black;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background: $color-white;
+  box-shadow: $box-shadow--primary;
+  transition: all $transition-slow;
+
+  &:hover {
+    box-shadow: $box-shadow--secondary;
+  }
+}
+
+@mixin h1 {
+  @include font-size($font-size--h1);
+  @include font--primary(800);
+  line-height: #{$line-height--h1}px;
+  margin-bottom: 1.5rem;
+
+  @media #{$mobile-down} {
+    @include font-size($s-font-size--h1);
+    line-height: #{$s-line-height--h1}px;
+  }
+}
+
+@mixin h2 {
+  @include font-size($font-size--h2);
+  @include font--primary(800);
+  line-height: #{$line-height--h2}px;
+  margin-bottom: 1.5rem;
+
+  @media #{$mobile-down} {
+    @include font-size($s-font-size--h2);
+    line-height: #{$s-line-height--h2}px;
+  }
+}
+
+@mixin h3 {
+  @include font-size($font-size--h3);
+  @include font--primary(700);
+  line-height: #{$line-height--h3}px;
+  margin-bottom: 1.5rem;
+
+  @media #{$mobile-down} {
+    @include font-size($s-font-size--h3);
+    line-height: #{$s-line-height--h3}px;
+  }
+}
+
+@mixin h4 {
+  @include font-size($font-size--h4);
+  @include font--primary();
+  line-height: #{$line-height--h4}px;
+  margin-bottom: 1.5rem;
+
+  @media #{$mobile-down} {
+    @include font-size($s-font-size--h4);
+    line-height: #{$s-line-height--h4}px;
+  }
+}
+
+@mixin paragraph {
+  @include font-size($font-size--paragraph);
+  @include font--primary();
+  line-height: #{$line-height--paragraph}px;
+  margin-bottom: 1rem;
+
+  @media #{$mobile-down} {
+    @include font-size($s-font-size--paragraph);
+    line-height: #{$s-line-height--paragraph}px;
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../Scss/Variables';
+@import '../../Scss/Mixins';
+
+footer {
+  padding: 20px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  background: $background-secondary;
+
+  h3 {
+    color: $text-secondary;
+  }
+
+  hr { background: $color-black; }
+
+  .socialsBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    li {
+      padding: 20px;
+      a {
+        @include paragraph;
+        font-weight: 700;
+        color: $text-light;
+        transition: $transition-normal;
+
+        &:hover {
+          color: $text-secondary;
+        }
+      }
+    }
+
+    #footerLogo {
+      align-self: flex-end;
+    }
+  }
+}

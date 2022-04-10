@@ -1,0 +1,84 @@
+@import 'Variables.scss';
+@import 'Mixins.scss';
+@import 'Animations.scss';
+
+/* Any imports required multiple times across the site will be imported here. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+/* Any CSS beyond this point will be globally applied to the whole document. */
+/* CSS Reset */
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 0;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+body, html, #root {
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: $background;
+    color: $text-primary;
+
+    a, button, input[type="submit"] {
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    h1 { @include h1; }
+    h2 { @include h2; }
+    h3 { @include h3; }
+    h4 { @include h4; }
+    p { @include paragraph; }
+
+    ::-webkit-scrollbar {
+        width: 10px;  /* for vertical scrollbars */
+        height: 10px; /* for horizontal scrollbars */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: $background-secondary;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.3);
+        transition: $transition-slow all;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .D-deskOnly {
+        display: none;
+        @media #{$normal} {
+                display: initial;
+        }
+    }
+
+    .D-tabletDown {
+        display: none;
+        @media #{$tablet-down} {
+            display: initial;
+        }
+    }
+
+    .specialColor {
+        color: $special-primary;
+    }
+}
