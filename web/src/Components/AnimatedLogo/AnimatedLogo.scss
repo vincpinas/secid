@@ -1,5 +1,18 @@
 @import '../../Scss/Variables';
 
+#Logo-secid-clean {
+  #Logo {
+    @keyframes logo-animation {
+      from { transform: translateY(0px) }
+      to { transform: translateY(-2px) }
+    }
+  
+    #S-1 { animation: logo-animation 3s ease-in-out 0.0s infinite alternate-reverse; }
+    #S-2 { animation: logo-animation 3s ease-in-out 0.3s infinite alternate;  }
+    #S-3 { animation: logo-animation 3s ease-in-out 0.3s infinite alternate-reverse; }
+  }
+}
+
 #Logo-secid-title {
   #Logo {
     @keyframes logo-animation {
@@ -27,18 +40,5 @@
         }
       }
     }
-  }
-}
-
-#Logo-secid-clean {
-  #Logo {
-    @keyframes logo-animation {
-      from { transform: translateY(0px) }
-      to { transform: translateY(-2px) }
-    }
-  
-    #S-1 { animation: logo-animation 3s ease-in-out 0.0s infinite alternate-reverse; }
-    #S-2 { animation: logo-animation 3s ease-in-out 0.3s infinite alternate;  }
-    #S-3 { animation: logo-animation 3s ease-in-out 0.3s infinite alternate-reverse; }
   }
 }
