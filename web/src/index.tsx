@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 
 ReactDOM.createRoot(container).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/secid'>
       {/* @ts-ignore: Unreachable code error */}
       <QueryClientProvider client={queryClient}>
         <App />
